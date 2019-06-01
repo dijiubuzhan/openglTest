@@ -4,6 +4,11 @@ import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.beauty.triangle.render.CircleShapeRender;
+import com.beauty.triangle.render.TextureRender;
+import com.beauty.triangle.render.TriangleShapeRender;
+
+
 public class MainActivity extends AppCompatActivity {
     GLSurfaceView glSurfaceView;
 
@@ -14,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
         glSurfaceView=new GLSurfaceView(this);
         glSurfaceView.setEGLContextClientVersion(2);
         //glSurfaceView.setRenderer(new TriangleShapeRender(this));
-        glSurfaceView.setRenderer(new SquareShapeRender(this));
+        //glSurfaceView.setRenderer(new SquareShapeRender(this));
+        //glSurfaceView.setRenderer(new CircleShapeRender(this));
+        glSurfaceView.setRenderer(new TextureRender(this));
 
         setContentView(glSurfaceView);
     }
