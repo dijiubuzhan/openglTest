@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         glSurfaceView=new GLSurfaceView(this);
         glSurfaceView.setEGLContextClientVersion(2);
-        glSurfaceView.setRenderer(new TriangleShapeRender(this));
+        //glSurfaceView.setRenderer(new TriangleShapeRender(this));
+        glSurfaceView.setRenderer(new SquareShapeRender(this));
 
         setContentView(glSurfaceView);
     }
