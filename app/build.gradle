@@ -16,6 +16,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    signingConfigs{
+        debug{
+
+        }
+        release{
+            storeFile file("forever.keystore")
+            storePassword "123456"
+            keyAlias "forever"
+            keyPassword "123456"
+        }
+    }
 }
 
 dependencies {
